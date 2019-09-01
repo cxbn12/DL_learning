@@ -45,8 +45,8 @@ critereon = MSELoss()
 optimizer = SGD(model.parameters(), lr=0.01)
 
 
-nb_epochs = 100
-data_size = 1000
+nb_epochs = 10
+data_size = 4000
 
 # create our training loop
 for epoch in range(nb_epochs):
@@ -86,14 +86,19 @@ plt.scatter(X_test, y_test, marker='o')
 plt.scatter(X_test, y_pred, marker='+')
 plt.show()
 
-print('w1, b1:\n\n')
-print(model.fc1.weight.data.numpy(),'\n',model.fc1.bias.data.numpy())
+# w1 = model.fc1.weight.data.numpy()
+# b1 = model.fc1.bias.data.numpy()
+# w2 = model.fc2.weight.data.numpy()
+# b2 = model.fc2.bias.data.numpy()
+# w3 = model.fc3.weight.data.numpy()
+# b3 = model.fc3.bias.data.numpy()
 
-print('\n\nw2, b2:\n\n')
-print(model.fc2.weight.data.numpy(),'\n',model.fc2.bias.data.numpy())
+# e = np.array([[.5]])
+# u1 = np.dot(w1, e)+b1
+# print(u1)
+# g1 = np.maximum(u1, 0)
+# print(g1)
 
-print('\n\nw3, b3:\n\n')
-print(model.fc3.weight.data.numpy(),'\n',model.fc3.bias.data.numpy())
 
 
 
